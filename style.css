@@ -1,11 +1,19 @@
-body {
-    background-color: lightsteelblue;
-}
 .navbar {
     background-color: darkslateblue;
+    margin-bottom: 45px;
+}
+body {
+    background-color: whitesmoke;
+    color: black;
 }
 .form-group {
     margin: 50px;
+}
+.jumbotron {
+    color: black;
+}
+footer {
+    margin-top: 50px;
 }
 
 // Extra small devices (portrait phones, less than 576px)
