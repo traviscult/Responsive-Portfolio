@@ -58,7 +58,6 @@ footer {
   padding: 30px;
 }
 
-
 /*
  * Header
  */
@@ -104,7 +103,6 @@ footer {
   }
 }
 
-
 /*
  * Cover
  */
@@ -133,6 +131,17 @@ footer {
   }
 
 }
-#travimg {
-  width: 600px;
+#travis {
+  margin-top: 50px;
+  max-width: 500px;;
+}
+#contact {
+  color:lightskyblue;
+  text-decoration: underline;
+}
+p {
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 800px;
 }
