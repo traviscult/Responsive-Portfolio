@@ -4,4 +4,6 @@
 .video {
     max-width: 1000px;
 }
-
+.col {
+    margin-top: 40px;
+}
