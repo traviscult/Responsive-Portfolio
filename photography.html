@@ -39,77 +39,81 @@
 </Header>
 
 <body>
-        <div class="row">
-          <div class="column">
-            <img id="myImg" src="Assets/Photo/srgreen.jpg">
-            <img id="myImg" src="Assets/Photo/existence.jpg">
-            <img id="myImg" src="Assets/Photo/flowermicro.jpg">
-            <img id="myImg" src="Assets/Photo/lake.jpg">
-          </div>
-          <div class="column">
-            <img id="myImg" src="Assets/Photo/goldcoast.jpg">
-            <img id="myImg" src="Assets/Photo/LA.jpg">
-            <img id="myImg" src="Assets/Photo/neon.jpg">
-            <img id="myImg" src="Assets/Photo/ocean.jpg">
-          </div>
-          <div class="column">
-            <img id="myImg" src="Assets/Photo/palms.JPG">
-            <img id="myImg" src="Assets/Photo/W2.jpg">
-            <img id="myImg" src="Assets/Photo/dadguitar.jpg">
-            <img id="myImg" src="Assets/Photo/branches.jpg">
-          </div>
-          <div class="column">
-            <img id="myImg" src="Assets/Photo/smdeepfog.jpg">
-            <img id="myImg" src="Assets/Photo/srblue.jpg">
-            <img id="myImg" src="Assets/Photo/water.jpg">
-            <img id="myImg" src="Assets/Photo/wl.jpg">
-          </div>
-        </div>
-        <div id="myModal" class="modal">
+  <div class="row">
+    <div class="column">
+      <img class="myImg" id="Img01" onclick={displaymodal(this)} src="Assets/Photo/srgreen.jpg">
+      <img class="myImg" id="Img02" onclick={displaymodal(this)} src="Assets/Photo/existence.jpg">
+      <img class="myImg" src="Assets/Photo/flowermicro.jpg">
+      <img class="myImg" src="Assets/Photo/lake.jpg">
+    </div>
+    <div class="column">
+      <img class="myImg" src="Assets/Photo/goldcoast.jpg">
+      <img class="myImg" src="Assets/Photo/LA.jpg">
+      <img class="myImg" src="Assets/Photo/neon.jpg">
+      <img class="myImg" src="Assets/Photo/ocean.jpg">
+    </div>
+    <div class="column">
+      <img class="myImg" src="Assets/Photo/palms.JPG">
+      <img class="myImg" src="Assets/Photo/W2.jpg">
+      <img class="myImg" src="Assets/Photo/dadguitar.jpg">
+      <img class="myImg" src="Assets/Photo/branches.jpg">
+    </div>
+    <div class="column">
+      <img class="myImg" src="Assets/Photo/smdeepfog.jpg">
+      <img class="myImg" src="Assets/Photo/srblue.jpg">
+      <img class="myImg" src="Assets/Photo/water.jpg">
+      <img class="myImg" src="Assets/Photo/wl.jpg">
+    </div>
+  </div>
+  <div id="myModal" class="modal">
 
-          <!-- The Close Button -->
-          <span class="close">&times;</span>
+    <!-- The Close Button -->
+    <span class="close">&times;</span>
 
-          <!-- Modal Content (The Image) -->
-          <img class="modal-content" id="img01">
+    <!-- Modal Content (The Image) -->
+    <img class="modal-content" id="img01">
 
-          <!-- Modal Caption (Image Text) -->
-          <div id="caption"></div>
-        </div>
+    <!-- Modal Caption (Image Text) -->
+    <div id="caption"></div>
+  </div>
 
-        <script>
-          // Get the modal
-          var modal = document.getElementById("myModal");
+  <script>
+    // Get the modal
+    var modal = document.getElementById("myModal");
 
-          // Get the image and insert it inside the modal - use its "alt" text as a caption
-          var img = document.getElementById("myImg");
-          var modalImg = document.getElementById("img01");
-          var captionText = document.getElementById("caption");
-          img.onclick = function () {
-            modal.style.display = "block";
-            modalImg.src = this.src;
-            captionText.innerHTML = this.alt;
-          }
+    // Get the image and insert it inside the modal - use its "alt" text as a caption
 
-          // Get the <span> element that closes the modal
-          var span = document.getElementsByClassName("close")[0];
+    function displaymodal(event) {
+      console.log(event)
+      console.log(event.src)
+      console.log(event.id)
+      var id= event.id
+      var img = document.getElementById(id);
+      var modalImg = document.getElementById("img01");
+      var captionText = document.getElementById("caption");
+      modal.style.display = "block";
+      modalImg.src = event.src;
+    }
 
-          // When the user clicks on <span> (x), close the modal
-          span.onclick = function () {
-            modal.style.display = "none";
-          }
-        </script>
-        <!-- Optional JavaScript -->
-        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-          integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-          crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-          integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-          crossorigin="anonymous"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-          integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-          crossorigin="anonymous"></script>
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function () {
+      modal.style.display = "none";
+    }
+  </script>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
 </body>
 <footer class="footer">
   <div class="container">

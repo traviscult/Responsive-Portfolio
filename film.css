@@ -7,3 +7,6 @@
 .col {
     margin-top: 40px;
 }
+header {
+    z-index: 100;
+}
